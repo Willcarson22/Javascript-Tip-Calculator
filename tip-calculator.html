@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="tip-calculator.css">
+  </head>
+  <body>
+
+    <h1>Tip Calculator</h1>
+    <h2><form onreset="displayResults()"><label for="bill">Bill:</label> <input type="number" id="bill" name="bill" min="0" onInput="displayResults()" placeholder="0"></h2>
+    <h2><label for="tip">Tip:</label> <input type="range" id="tip" name="tip" min="0" max="100" onInput="displayResults()" value="20"> <label for="tip" id="tip-percent"></label></h2>
+    <h2><label for="persons">Person(s)</label><input type="number" id="persons" name="persons" min="1" max="10" onInput="displayResults()" value="1"><span id="above-one"> Split the tip? <label for="yes">Yes</label><input type="radio" id="yes" name="split" onInput="displayResults()" value="Yes" checked><label for="no">No</label><input type="radio" id="no" name="split" onInput="displayResults()" value="No"></span></h2>
+    <h1>Results</h1>
+    <h2>Tip Total: <span id="tip-total"> </span></h2>
+    <h2>Total Bill With Tip: <span id="bill-total"> </span></h2>
+    <h2 id="quantity">Each Pay: <span id="each-pay"></span><span id="separate"> (Tip Separate)</span></h2>
+    <input type="reset" value="Clear"></form>
+
+    
+	<script src="tip-calculator.js"></script>
+  </body>
+</html>
